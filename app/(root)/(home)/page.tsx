@@ -39,7 +39,7 @@ const Page = () => {
   }, []);
 
   return (
-    <main className='flex-center py-[120px] md:py-[200px] mx-auto w-full max-w-screen-2xl flex-col'>
+    <main className='flex-center py-[50px] md:py-[200px] mx-auto w-full max-w-screen-2xl flex-col'>
       <section className='nav-padding w-full'>
         <div className='flex-center relative min-h-[150px] md:min-h-[200px] px-4'>
           <h1 className='text-4xl md:text-7xl font-bold mb-5 text-center'>HODL on</h1>
