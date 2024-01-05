@@ -19,12 +19,6 @@ const Footer = () => {
             </li>
 
             <li className='mx-3'>
-                <Link href="https://www.instagram.com/svadjica?igsh=YTQwZjQ0NmI0OA==">
-                    <Image src="/instagram-logo-fill.svg" alt='instagram thunder'  width={30} height={30}/>
-                </Link>
-            </li>
-
-            <li className='mx-3'>
                 <Link href="https://damus.io/npub1dhvlm7aumyhy60mlv3lemk4newny4uwkdc9ahcskk4lvatytq4vq60lcq6">
                     <Image src='/nostr.svg' alt='nostr thunder' width={30} height={30}/>
                 </Link>
