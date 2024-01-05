@@ -27,7 +27,7 @@ const Page = () => {
 
     timerRef.current = window.setTimeout(() => {
       setIsVisible(true);
-    }, 3000);
+    }, 5000);
   };
 
   useEffect(() => {
