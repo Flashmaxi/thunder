@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
     <div>
         <Link href="/">
-            <Image className='mx-auto' src="/thunder_p.svg" alt='logo' width={300} height={200}/>
+            <Image className='mx-auto' src="/thunder_p.svg" alt='logo' width={250} height={200}/>
         </Link>
     </div>
     <nav className='flex-center fixed top-0 z-50 w-fullpy-7 text-whites'>

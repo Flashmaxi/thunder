@@ -43,7 +43,7 @@ const Page = () => {
       <section className='nav-padding w-full'>
         <div className='flex-center relative min-h-[150px] md:min-h-[200px] px-4'>
           <h1 className='text-4xl md:text-7xl font-bold mb-5 text-center'>HODL on</h1>
-          <div className='text-sm md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-7'>
+          <div className='text-sm font-medium md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-7'>
             …brb, learning how to use a typewriter
           </div>
 
@@ -63,10 +63,9 @@ const Page = () => {
           </div>
 
           {isInteractedRef.current && !isVisible && (
-            <div className="text-sm md:text-2xl  opacity-60 text-center flex flex-center justify-center w-full max-w-md items-center mx-auto">
-              Lol, keep your data, I respect your privacy
-              <br />
-              Stay tuned for updates
+            <div className="text-sm md:text-2xl font-medium opacity-60 text-center flex flex-center justify-center w-full max-w-md items-center mx-auto">
+              Lol, keep your data, I respect your privacy,
+              stay tuned for updates.
             </div>
           )}
         </div>
