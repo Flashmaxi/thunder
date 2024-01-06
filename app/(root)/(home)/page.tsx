@@ -39,11 +39,11 @@ const Page = () => {
   }, []);
 
   return (
-    <main className='flex-center py-[50px] md:py-[200px] mx-auto w-full max-w-screen-2xl flex-col'>
+    <main className='flex-center py-[160px] mx-auto w-full max-w-screen-2xl flex-col'>
       <section className='nav-padding w-full'>
         <div className='flex-center relative min-h-[150px] md:min-h-[200px] px-4'>
-          <h1 className='text-4xl md:text-7xl font-bold mb-5 text-center'>HODL on</h1>
-          <div className='text-sm font-medium md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-7'>
+          <h1 className='text-4xl md:text-7xl font-bold mb-[38px] text-center'>HODL on</h1>
+          <div className='text-sm font-medium md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-[38px]'>
             …brb, learning how to use a typewriter
           </div>
 
@@ -56,8 +56,8 @@ const Page = () => {
           >
             {isVisible && (
               <div className='w-full md:flex md:justify-between'>
-                <Input className='w-full mb-3 md:mb-0 md:me-2' type="email" placeholder="Email" />
-                <Button className='w-full md:w-fit' type="submit">Sign up</Button>
+                <Input className='h-16 rounded-xl w-full mb-3 md:mb-0 md:me-2' type="email" placeholder="Email" />
+                <Button className='h-16 bg-[#222222] rounded-xl w-full md:w-fit' type="submit">Sign up</Button>
               </div>
             )}
           </div>

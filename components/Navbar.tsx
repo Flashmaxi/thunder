@@ -5,9 +5,9 @@ import React from 'react'
 const Navbar = () => {
   return (
     <>
-    <div>
+    <div className='pt-[58px]'>
         <Link href="/">
-            <Image className='mx-auto' src="/thunder_p.svg" alt='logo' width={250} height={200}/>
+            <Image className='mx-auto' src="/thunder_p.svg" alt='logo' width={140} height={76}/>
         </Link>
     </div>
     <nav className='flex-center fixed top-0 z-50 w-fullpy-7 text-whites'>
