@@ -53,7 +53,7 @@ const Page = () => {
   const textVariants = {
     hidden: { opacity: 0, y: 0 },
     visible: {
-      opacity: 1,
+      opacity: 0.6,
       y: 0,
       transition: {
         delay: 0.3, // Adjust the delay time
@@ -108,9 +108,14 @@ const Page = () => {
         </motion.div>
 
         {isInteractedRef.current && !isVisible && (
-          <motion.div className="text-sm md:text-2xl font-medium opacity-60 text-center flex flex-center justify-center w-full max-w-md items-center mx-auto" variants={itemVariants}>
-            Lol, keep your data, I respect your privacy,
-            stay tuned for updates.
+          <motion.div>
+            <motion.div className="text-sm md:text-2xl font-medium opacity-60 text-center flex flex-center justify-center w-full max-w-md items-center mx-auto mb-3" variants={textVariants}>
+              lol, keep your data I respect your privacy,
+            </motion.div>
+
+            <motion.div className="text-sm md:text-2xl font-medium opacity-60 text-center flex flex-center justify-center w-full max-w-md items-center mx-auto" variants={textVariants}>
+              stay tuned for updates.
+            </motion.div>
           </motion.div>
         )}
       </section>
