@@ -56,8 +56,8 @@ const Page = () => {
           >
             {isVisible && (
               <div className='w-full md:flex md:justify-between'>
-                <Input className='h-16 rounded-xl w-full mb-3 md:mb-0 md:me-2' type="email" placeholder="Email" />
-                <Button className='h-16 bg-[#222222] rounded-xl w-full md:w-fit' type="submit">Sign up</Button>
+                <Input className='h-12 md:h-16 rounded-xl w-full mb-3 md:mb-0 md:me-2' type="email" placeholder="Email" />
+                <Button className='h-12 md:h-16 bg-[#222222] rounded-xl w-full md:w-fit' type="submit">Sign up</Button>
               </div>
             )}
           </div>

@@ -4,7 +4,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='w-full gap-y-10 max-md:flex-col mt-10'>
+    <footer className='w-full gap-y-10 max-md:flex-col'>
         <ul className="mx-auto flex flex-center justify-center flex-row items-center content-center">
         <li className='mx-3'>
                 <Link href="https://damus.io/npub1dhvlm7aumyhy60mlv3lemk4newny4uwkdc9ahcskk4lvatytq4vq60lcq6">
