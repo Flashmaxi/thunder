@@ -21,19 +21,19 @@ const Footer = () => {
       <ul className="mx-auto flex flex-center justify-center flex-row items-center content-center">
         <motion.li className='mx-3' variants={linkVariants} initial="hidden" animate="visible">
           <Link href="https://damus.io/npub1dhvlm7aumyhy60mlv3lemk4newny4uwkdc9ahcskk4lvatytq4vq60lcq6">
-            <Image src='/nostricon.svg' alt='nostr thunder' width={32} height={32} />
+            <Image src='/nostr.svg' alt='nostr thunder' width={30} height={30} />
           </Link>
         </motion.li>
 
         <motion.li className='mx-3' variants={linkVariants} initial="hidden" animate="visible">
           <Link href="https://www.linkedin.com/in/sladjanamaticrizvic/">
-            <Image src='/linkedin.svg' alt='thunder linkedin' width={32} height={32} />
+            <Image src='/linkedin.svg' alt='thunder linkedin' width={30} height={30} />
           </Link>
         </motion.li>
 
         <motion.li className='mx-3' variants={linkVariants} initial="hidden" animate="visible">
           <Link href="https://twitter.com/svadjica?lang=en">
-            <Image src="/twitterlogo.svg" alt='thunder twitter' width={32} height={32} />
+            <Image src="/twitter.svg" alt='thunder twitter' width={30} height={30} />
           </Link>
         </motion.li>
       </ul>

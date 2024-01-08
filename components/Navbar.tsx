@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
     <div className='pt-[30px] md:pt-[58px]'>
         <Link href="/">
-            <Image className='mx-auto' src="/thunder_p.svg" alt='logo' width={140} height={76}/>
+            <Image className='mx-auto' src="/thunder_p.svg" alt='logo' width={250} height={76}/>
         </Link>
     </div>
     <nav className='flex-center top-0 z-50 w-full text-whites'>

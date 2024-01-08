@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         'btn-color': '#222222',
       },
+      linearGradient: {
+        'to-r': 'linear-gradient(91deg, #FFF 25.75%, #FA8CDA 70.14%)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

@@ -8,36 +8,15 @@ import { motion } from 'framer-motion';
 const Page = () => {
   const [isVisible, setIsVisible] = useState(true);
   const isInteractedRef = useRef(false);
-  const timerRef = useRef<number | null>(null);
-
-  const handleInteractionStart = () => {
-    isInteractedRef.current = true;
-    setIsVisible(false);
-    resetTimer();
-  };
-
-  const handleInteractionEnd = () => {
-    isInteractedRef.current = false;
-    setIsVisible(true);
-  };
 
   const resetTimer = () => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-
-    timerRef.current = window.setTimeout(() => {
+    setIsVisible(false);
+    isInteractedRef.current = true;
+    setTimeout(() => {
       setIsVisible(true);
+      isInteractedRef.current = false;
     }, 5000);
   };
-
-  useEffect(() => {
-    return () => {
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
-      }
-    };
-  }, []);
 
   const itemVariants = {
     hidden: { opacity: 0, y: 0 },
@@ -45,7 +24,7 @@ const Page = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.2, // Adjust the delay time
+        delay: 0.2,
       },
     },
   };
@@ -56,7 +35,7 @@ const Page = () => {
       opacity: 0.6,
       y: 0,
       transition: {
-        delay: 0.3, // Adjust the delay time
+        delay: 0.3,
       },
     },
   };
@@ -67,13 +46,13 @@ const Page = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.4, // Adjust the delay time
+        delay: 0.4,
       },
     },
   };
 
   return (
-    <main className='flex-center py-[100px] md:py-[160px] mx-auto w-full max-w-screen-2xl flex-col'>
+    <main className='flex-center py-[84px] md:py-[160px] mx-auto w-full max-w-screen-2xl flex-col'>
       <section className='nav-padding w-full'>
         <motion.div
           className='flex-center relative min-h-[150px] md:min-h-[200px] px-4'
@@ -89,15 +68,12 @@ const Page = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-center w-full max-w-sm items-center space-x-2 mx-auto hover-container px-2"
-          onMouseEnter={handleInteractionStart}
-          onMouseLeave={handleInteractionEnd}
-          onTouchStart={handleInteractionStart}
-          onTouchEnd={handleInteractionEnd}
+          className="flex flex-center w-full max-w-sm items-center space-x-2 mx-auto px-2"
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
           exit="hidden"
           variants={inputVariants}
+          onClick={resetTimer}
         >
           {isVisible && (
             <motion.div className='w-full md:flex md:justify-between' variants={inputVariants}>
@@ -109,8 +85,8 @@ const Page = () => {
 
         {isInteractedRef.current && !isVisible && (
           <motion.div>
-            <motion.div className="text-sm md:text-2xl font-medium opacity-60 text-center flex flex-center justify-center w-full max-w-md items-center mx-auto mb-3" variants={textVariants}>
-              lol, keep your data I respect your privacy,
+            <motion.div className="text-lg md:text-2xl font-medium text-gradient text-center flex flex-center justify-center w-7/12 md:w-full md:max-w-lg items-center  mx-auto mb-6 md:mb-[38px]" variants={textVariants}>
+              lol, keep your data, I respect your privacy
             </motion.div>
 
             <motion.div className="text-sm md:text-2xl font-medium opacity-60 text-center flex flex-center justify-center w-full max-w-md items-center mx-auto" variants={textVariants}>
@@ -124,3 +100,4 @@ const Page = () => {
 };
 
 export default Page;
+
