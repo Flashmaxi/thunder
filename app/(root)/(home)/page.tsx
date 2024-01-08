@@ -68,7 +68,7 @@ const Page = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-center w-full max-w-sm items-center space-x-2 mx-auto px-2"
+          className="flex flex-center w-full max-w-md items-center space-x-2 mx-auto px-2"
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
           exit="hidden"
@@ -77,8 +77,8 @@ const Page = () => {
         >
           {isVisible && (
             <motion.div className='w-full md:flex md:justify-between' variants={inputVariants}>
-              <Input className='h-12 md:h-16 rounded-xl w-full mb-3 md:mb-0 md:me-2' type="email" placeholder="Email" />
-              <Button className='h-12 md:h-16 bg-[#222222] rounded-xl w-full md:w-fit' type="submit">Sign up</Button>
+              <Input className='md:w-[333px] h-12 md:h-16 rounded-xl w-full mb-3 md:mb-0 md:me-2' type="email" placeholder="Email" />
+              <Button className='md:w-[110px] h-12 md:h-16 bg-[#222222] rounded-xl w-full' type="submit">Sign up</Button>
             </motion.div>
           )}
         </motion.div>
