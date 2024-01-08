@@ -55,14 +55,14 @@ const Page = () => {
     <main className='flex-center py-[84px] md:py-[160px] mx-auto w-full max-w-screen-2xl flex-col'>
       <section className='nav-padding w-full'>
         <motion.div
-          className='flex-center relative min-h-[150px] md:min-h-[200px] px-4'
+          className='flex-center relative md:min-h-[200px] px-4'
           initial="hidden"
           animate="visible"
           exit="hidden"
           variants={itemVariants}
         >
-          <motion.h1 className='text-4xl md:text-7xl font-bold  mb-6 md:mb-[38px] text-center' variants={itemVariants}>HODL on</motion.h1>
-          <motion.div className='text-sm font-medium md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-6 md:mb-[38px]' variants={textVariants}>
+          <motion.h1 className='text-4xl md:text-7xl font-bold  mb-8 md:mb-[38px] text-center' variants={itemVariants}>HODL on</motion.h1>
+          <motion.div className='text-sm font-medium md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-8 md:mb-[38px]' variants={textVariants}>
             …brb, learning how to use a typewriter
           </motion.div>
         </motion.div>
@@ -85,7 +85,7 @@ const Page = () => {
 
         {isInteractedRef.current && !isVisible && (
           <motion.div>
-            <motion.div className="text-lg md:text-2xl font-medium text-gradient text-center flex flex-center justify-center w-7/12 md:w-full md:max-w-lg items-center  mx-auto mb-6 md:mb-[38px]" variants={textVariants}>
+            <motion.div className="text-lg md:text-2xl font-medium text-gradient text-center flex flex-center justify-center w-7/12 md:w-full md:max-w-lg items-center  mx-auto mb-8 md:mb-[38px]" variants={textVariants}>
               lol, keep your data, I respect your privacy
             </motion.div>
 
