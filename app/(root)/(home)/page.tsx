@@ -61,8 +61,8 @@ const Page = () => {
           exit="hidden"
           variants={itemVariants}
         >
-          <motion.h1 className='text-4xl md:text-7xl font-bold mb-[38px] text-center' variants={itemVariants}>HODL on</motion.h1>
-          <motion.div className='text-sm font-medium md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-[38px]' variants={textVariants}>
+          <motion.h1 className='text-4xl md:text-7xl font-bold  mb-6 md:mb-[38px] text-center' variants={itemVariants}>HODL on</motion.h1>
+          <motion.div className='text-sm font-medium md:text-2xl  opacity-60 flex flex-center w-full justify-center max-w-md items-center mx-auto mb-6 md:mb-[38px]' variants={textVariants}>
             …brb, learning how to use a typewriter
           </motion.div>
         </motion.div>
