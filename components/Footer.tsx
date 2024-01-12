@@ -32,7 +32,7 @@ const Footer = () => {
         </motion.li>
 
         <motion.li className='mx-3' variants={linkVariants} initial="hidden" animate="visible">
-          <Link href="https://twitter.com/svadjica?lang=en">
+          <Link href="https://twitter.com/ThunderSvadjica">
             <Image src="/twitter.svg" alt='thunder twitter' width={30} height={30} />
           </Link>
         </motion.li>
