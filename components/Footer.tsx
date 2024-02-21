@@ -4,7 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+
 const Footer = () => {
+    const navItems = [
+      { id: 1, text: 'Who dis?', href: "#about" },
+      { id: 2, text: 'Books', href: "#books" },
+      // { id: 3, text: 'Blog', href: "#blog" },
+      { id: 4, text: 'Contact', href: "#contact" },
+  ];
+
   const linkVariants = {
     hidden: { opacity: 0, y: 0 },
     visible: {
@@ -17,26 +25,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className='w-full gap-y-10 max-md:flex-col'>
-      <ul className="mx-auto flex flex-center justify-center flex-row items-center content-center">
-        <motion.li className='mx-3' variants={linkVariants} initial="hidden" animate="visible">
-          <Link href="https://damus.io/npub1dhvlm7aumyhy60mlv3lemk4newny4uwkdc9ahcskk4lvatytq4vq60lcq6">
-            <Image src='/nostr.svg' alt='nostr thunder' width={30} height={30} />
-          </Link>
-        </motion.li>
+    <footer className='w-full mt-24 bg-[#212121]  rounded-t-2xl'>
+      <div className='flex flex-col lg:flex-row justify-between items-center h-24 max-w-[1600px] mx-auto px-4 text-white w-full'>
+        <p className="text-[#ffffff80] text-[10px] order-2 lg:order-1 py-[10px] lg:py-0">© 2024 Thunder</p>
 
-        <motion.li className='mx-3' variants={linkVariants} initial="hidden" animate="visible">
-          <Link href="https://www.linkedin.com/in/sladjanamaticrizvic/">
-            <Image src='/linkedin.svg' alt='thunder linkedin' width={30} height={30} />
-          </Link>
-        </motion.li>
-
-        <motion.li className='mx-3' variants={linkVariants} initial="hidden" animate="visible">
-          <Link href="https://twitter.com/ThunderSvadjica">
-            <Image src="/twitter.svg" alt='thunder twitter' width={30} height={30} />
-          </Link>
-        </motion.li>
-      </ul>
+        <ul className="flex justify-between sm:w-[300px] mt-[20px] lg:mt-0 mb-[10px] lg:mb-0 text-2xl order-1 lg:order-3">
+        {navItems.map(item => (
+            <a href={item.href}>
+              <li
+                key={item.id}
+                className='text-[12px] px-3 font-semibold hover:bg-[#fa8cda1a] rounded-xl cursor-pointer duration-300 hover:text-[#FA8CDA]'
+              >
+                {item.text}
+              </li>
+            </a>
+          ))}
+        </ul>
+      </div>
     </footer>
   );
 };
