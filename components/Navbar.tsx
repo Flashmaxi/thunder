@@ -92,21 +92,21 @@ const Navbar = () => {
           
         <ul className="ml-[40px] py-8 flex flex-start justify-start flex-row items-center content-start">
           <li className='mr-[15px]'>
-            <a href="https://snort.social/npub1dhvlm7aumyhy60mlv3lemk4newny4uwkdc9ahcskk4lvatytq4vq60lcq6" target="_blank">
+            <Link href="https://snort.social/npub1dhvlm7aumyhy60mlv3lemk4newny4uwkdc9ahcskk4lvatytq4vq60lcq6" target="_blank">
               <Image src='/nostr.svg' alt='nostr thunder' width={36} height={36} />
-            </a>
+            </Link>
           </li>
 
           <li className='mr-[15px]'>
-            <a href="https://www.linkedin.com/in/sladjanamaticrizvic/" target="_blank">
+            <Link href="https://www.linkedin.com/in/sladjanamaticrizvic/" target="_blank">
               <Image src='/linkedin.svg' alt='thunder linkedin' width={36} height={36} />
-            </a>
+            </Link>
           </li>
 
           <li className=''>
-            <a href="https://twitter.com/ThunderSvadjica" target="_blank">
+            <Link href="https://twitter.com/ThunderSvadjica" target="_blank">
               <Image src="/twitter.svg" alt='thunder twitter' width={36} height={36} />
-            </a>
+            </Link>
           </li>
         </ul>
         </ul>
