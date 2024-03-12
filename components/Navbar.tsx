@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className='flex justify-between items-center h-24 max-w-[1600px] mx-auto px-4 text-white w-full'>
         {/* Logo */}
         <Link href="/">
-            <Image className='mx-auto' src="/thunder_p.png" alt='logo' width={95} height={76}/>
+            <Image className='mx-auto' src="/thunder_p.svg" alt='logo' width={95} height={76}/>
         </Link>
 
         {/* Desktop Navigation */}
