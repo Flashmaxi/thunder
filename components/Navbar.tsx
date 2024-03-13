@@ -47,7 +47,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className='hidden md:flex'>
           {navItems.map(item => (
-            <a href={item.href}>
+            <a key={item.id} href={item.href}>
               <li
                 key={item.id}
                 className='p-4 font-semibold hover:bg-[#fa8cda1a] rounded-xl m-2 cursor-pointer duration-300 hover:text-[#FA8CDA]'
@@ -79,7 +79,7 @@ const Navbar = () => {
 
           {/* Mobile Navigation Items */}
           {navItems.map(item => (
-            <a href={item.href}>
+            <a key={item.id} href={item.href}>
               <li
                 key={item.id}
                 className='py-[10px] text-[22px] font-semibold ps-[40px] hover:bg-[#fa8cda1a] duration-300 hover:text-[#FA8CDA] cursor-pointer'

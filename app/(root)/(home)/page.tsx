@@ -65,11 +65,12 @@ const Page = () => {
             </h1>
 
             <div className='text-[16px] lg:text-[20px] leading-normal mb-4'>
-            Welcome to my corner of the Internet! I'm Thunder, a Bitcoiner deeply invested in the world of Bitcoin startups and recruitment. With years of experience in both realms, I understand the challenges companies encounter when seeking top talent, as well as the hurdles job seekers face when navigating the competitive landscape of the Bitcoin industry.
-</div>
-<div className='text-[16px] lg:text-[20px] leading-normal mb-4'>My mission is simple: to bridge the gap between employers and job seekers in the Bitcoin ecosystem. I believe in creating a common ground where both parties can thrive, fostering meaningful connections that drive innovation and growth.
-
-</div> <div className='text-[16px] lg:text-[20px] leading-normal'>Whether you're a forward-thinking company seeking to build your dream team or an ambitious individual eager to carve out a career path in Bitcoin, I hope I can support you every step of the way.
+             Welcome to my corner of the Internet! I'm Thunder, a Bitcoiner deeply invested in the world of Bitcoin startups and recruitment. With years of experience in both realms, I understand the challenges companies encounter when seeking top talent, as well as the hurdles job seekers face when navigating the competitive landscape of the Bitcoin industry.
+            </div>
+            <div className='text-[16px] lg:text-[20px] leading-normal mb-4'>
+              My mission is simple: to bridge the gap between employers and job seekers in the Bitcoin ecosystem. I believe in creating a common ground where both parties can thrive, fostering meaningful connections that drive innovation and growth.
+            </div> 
+            <div className='text-[16px] lg:text-[20px] leading-normal'>Whether you're a forward-thinking company seeking to build your dream team or an ambitious individual eager to carve out a career path in Bitcoin, I hope I can support you every step of the way.
             </div>
             <Image className='ml-auto' src="/thunder_p.svg" alt='logo' width={95} height={76}/> 
           </div>

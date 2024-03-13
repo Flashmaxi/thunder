@@ -31,7 +31,7 @@ const Footer = () => {
 
         <ul className="flex justify-between sm:w-[300px] mt-[20px] lg:mt-0 mb-[10px] lg:mb-0 text-2xl order-1 lg:order-3">
         {navItems.map(item => (
-            <a href={item.href}>
+            <a key={item.id} href={item.href}>
               <li
                 key={item.id}
                 className='text-[12px] px-3 font-semibold hover:bg-[#fa8cda1a] rounded-xl cursor-pointer duration-300 hover:text-[#FA8CDA]'
