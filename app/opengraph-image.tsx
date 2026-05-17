@@ -16,8 +16,9 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: '80px',
-          background:
-            'radial-gradient(circle at 25% 20%, rgba(250,140,218,0.35), transparent 55%), radial-gradient(circle at 80% 90%, rgba(217,70,239,0.25), transparent 55%), #000001',
+          backgroundColor: '#000001',
+          backgroundImage:
+            'radial-gradient(circle at 25% 20%, rgba(250,140,218,0.35), transparent 55%), radial-gradient(circle at 80% 90%, rgba(217,70,239,0.25), transparent 55%)',
           color: 'white',
           fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif',
         }}
@@ -54,12 +55,15 @@ export default function OpengraphImage() {
               margin: 0,
               letterSpacing: '-0.02em',
               maxWidth: 980,
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '0 24px',
             }}
           >
-            Get hired in{' '}
+            <span>Get hired in</span>
             <span
               style={{
-                background: 'linear-gradient(91deg, #FFF 20%, #FA8CDA 70%)',
+                backgroundImage: 'linear-gradient(91deg, #FFF 20%, #FA8CDA 70%)',
                 backgroundClip: 'text',
                 color: 'transparent',
               }}
