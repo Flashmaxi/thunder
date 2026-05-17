@@ -1,31 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   html {
-    @apply scroll-smooth;
-  }
-  * {
-    @apply border-border;
-    @apply scroll-smooth;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-  .section {
-    @apply w-full h-screen pt-[60px] xl:pt-[120px];
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
+  body {
+    @apply bg-thunder-bg text-white antialiased;
+    background-image:
+      radial-gradient(60% 60% at 50% 0%, rgba(250, 140, 218, 0.10) 0%, rgba(0, 0, 1, 0) 70%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(250, 140, 218, 0.35);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #FA8CDA;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
   .text-gradient {
     background: linear-gradient(91deg, #FFF 25.75%, #FA8CDA 70.14%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-
-  html {
-    --scroll-behavior: smooth!important;
-    scroll-behavior: smooth!important;
-    }
 }
