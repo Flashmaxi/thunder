@@ -8,13 +8,24 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import AnimatedHeading from '@/components/motion/AnimatedHeading'
 import ShimmerButton from '@/components/ShimmerButton'
 
 const Hero = () => {
   const ref = useRef<HTMLDivElement>(null)
   const prefersReducedMotion = useReducedMotion()
+  const [isSmall, setIsSmall] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 640px), (hover: none) and (pointer: coarse)')
+    const update = () => setIsSmall(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  const ambient = prefersReducedMotion || isSmall
 
   const mx = useMotionValue(0)
   const my = useMotionValue(0)
@@ -33,7 +44,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center py-16 min-[1440px]:py-24 overflow-hidden">
+    <section className="relative min-h-svh flex items-center py-16 min-[1440px]:py-24 overflow-hidden">
       <div className="container mx-auto">
         <div className="flex flex-col min-[1440px]:flex-row items-center justify-between gap-12 min-[1440px]:gap-20 max-w-[1440px] mx-auto">
           <div className="flex-1 text-center min-[1440px]:text-left max-w-[760px] order-2 min-[1440px]:order-1">
@@ -94,9 +105,7 @@ const Hero = () => {
             className="flex-1 relative w-full max-w-[480px] sm:max-w-[560px] min-[1440px]:max-w-[700px] order-1 min-[1440px]:order-2"
           >
             <motion.div
-              animate={
-                prefersReducedMotion ? undefined : { y: [0, -14, 0] }
-              }
+              animate={ambient ? undefined : { y: [0, -14, 0] }}
               transition={{
                 duration: 6,
                 repeat: Infinity,

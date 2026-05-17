@@ -42,7 +42,7 @@ const Books = () => {
   return (
     <section
       id="books"
-      className="relative min-h-screen flex items-center py-20 lg:py-28 scroll-mt-24"
+      className="relative min-h-svh flex items-center py-20 lg:py-28 scroll-mt-24"
     >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 max-w-[1280px] mx-auto items-start">
@@ -60,18 +60,9 @@ const Books = () => {
               className="text-center flex flex-col items-center"
             >
               <div className="relative mb-8 group">
-                <motion.div
+                <div
                   aria-hidden="true"
-                  className="absolute inset-0 -z-10 rounded-2xl bg-thunder-pink/40 blur-[60px]"
-                  animate={{
-                    opacity: [0.4, 0.7, 0.4],
-                    scale: [0.9, 1.05, 0.9],
-                  }}
-                  transition={{
-                    duration: 4 + i,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
+                  className="absolute inset-0 -z-10 rounded-2xl bg-thunder-pink/40 blur-[60px] opacity-60"
                 />
                 <TiltCard maxTilt={14} glare>
                   <Image

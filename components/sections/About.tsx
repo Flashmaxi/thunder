@@ -15,7 +15,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center py-20 lg:py-28 scroll-mt-24"
+      className="relative min-h-svh flex items-center py-20 lg:py-28 scroll-mt-24"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24 max-w-[1280px] mx-auto">
@@ -27,11 +27,9 @@ const About = () => {
             className="flex-shrink-0 w-full max-w-[360px] lg:max-w-[440px]"
           >
             <div className="relative">
-              <motion.div
+              <div
                 aria-hidden="true"
-                className="absolute -inset-6 rounded-3xl bg-thunder-pink/30 blur-[60px]"
-                animate={{ opacity: [0.4, 0.7, 0.4] }}
-                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -inset-6 rounded-3xl bg-thunder-pink/30 blur-[60px] opacity-60"
               />
               <TiltCard maxTilt={8}>
                 <Image
