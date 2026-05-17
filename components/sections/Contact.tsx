@@ -41,10 +41,10 @@ const Contact = () => {
             {socials.map((s, i) => (
               <motion.li
                 key={s.href}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ delay: 0.15 + i * 0.07, duration: 0.45 }}
               >
                 <MagneticLink
                   href={s.href}
@@ -69,7 +69,7 @@ const Contact = () => {
             ))}
           </ul>
 
-          <Reveal delay={0.5}>
+          <Reveal delay={0.3}>
             <p className="text-white/70 max-w-2xl">
               I respect your privacy: Your data will not be collected. We will not
               even be counting how many downloads we get!

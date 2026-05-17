@@ -17,7 +17,7 @@ const container: Variants = {
   visible: (delay: number) => ({
     transition: {
       delayChildren: delay,
-      staggerChildren: 0.06,
+      staggerChildren: 0.04,
     },
   }),
 }
@@ -28,7 +28,7 @@ const word: Variants = {
     opacity: 1,
     y: '0em',
     filter: 'blur(0px)',
-    transition: { duration: 0.65, ease: [0.21, 0.47, 0.32, 0.98] },
+    transition: { duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] },
   },
 }
 
@@ -75,7 +75,7 @@ const AnimatedHeading = ({
       className={`pb-[0.15em] ${className}`}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={container}
       custom={delay}
     >

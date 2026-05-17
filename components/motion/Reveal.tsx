@@ -28,7 +28,7 @@ const Reveal = ({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.55,
         delay,
         ease: [0.21, 0.47, 0.32, 0.98],
       },
@@ -42,7 +42,7 @@ const Reveal = ({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, margin: '-80px' }}
+      viewport={{ once, amount: 0.15 }}
       variants={variants}
     >
       {children}

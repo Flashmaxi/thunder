@@ -64,9 +64,8 @@ const Hero = () => {
 
             <motion.p
               initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.5 }}
               className="text-[18px] lg:text-[22px] min-[1440px]:text-[24px] leading-snug mb-8 min-[1440px]:mb-10 text-white/80 text-balance"
             >
               Empowering Job Seekers and Companies in the Bitcoin Job Market
@@ -74,9 +73,8 @@ const Hero = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               className="flex justify-center min-[1440px]:justify-start"
             >
               <ShimmerButton href="#books" className="w-full sm:w-auto sm:min-w-[267px]">

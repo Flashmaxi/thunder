@@ -20,10 +20,10 @@ const About = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24 max-w-[1280px] mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -40, scale: 0.95 }}
+            initial={{ opacity: 0, x: -32, scale: 0.96 }}
             whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.9, ease: [0.21, 0.47, 0.32, 0.98] }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="flex-shrink-0 w-full max-w-[360px] lg:max-w-[440px]"
           >
             <div className="relative">
@@ -54,14 +54,14 @@ const About = () => {
             </Reveal>
 
             {paragraphs.map((p, i) => (
-              <Reveal as="p" key={i} delay={0.1 + i * 0.1}>
+              <Reveal as="p" key={i} delay={0.05 + i * 0.07}>
                 <span className="block text-[16px] lg:text-[19px] leading-relaxed mb-5 text-white/85">
                   {p}
                 </span>
               </Reveal>
             ))}
 
-            <Reveal delay={0.4}>
+            <Reveal delay={0.25}>
               <Image
                 className="ml-auto mt-2 opacity-90"
                 src="/thunder_p.svg"
